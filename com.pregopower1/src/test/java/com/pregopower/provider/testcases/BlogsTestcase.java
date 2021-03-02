@@ -20,6 +20,7 @@ public class BlogsTestcase extends Base {
 		driver = intializeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://uat.pregopower.com/");
+		driver.navigate().refresh();
 
 	}
 
@@ -37,9 +38,15 @@ public class BlogsTestcase extends Base {
 
 	@Test(priority = 0)
 
-	public void TC01() {
+	public void TC01() throws InterruptedException {
 		obj = new BlogsPages(driver);
+		try{
+			
 		obj.closepoplink();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
 		obj.homePageOptions1();
 
 	}
@@ -47,7 +54,6 @@ public class BlogsTestcase extends Base {
 	@Test(priority = 2)
 	public void TC02() throws InterruptedException {
 		obj = new BlogsPages(driver);
-
 		// obj.closePopup();
 		obj.reccentpages();
 	}
@@ -63,6 +69,7 @@ public class BlogsTestcase extends Base {
 
 	public void TC04() throws InterruptedException {
 		obj = new BlogsPages(driver);
+		
 		obj.dropdown();
 	}
 	

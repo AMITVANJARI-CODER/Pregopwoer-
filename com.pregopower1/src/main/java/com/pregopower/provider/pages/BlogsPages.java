@@ -2,7 +2,7 @@ package com.pregopower.provider.pages;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.math3.util.OpenIntToDoubleHashMap.Iterator;
+//import org.apache.commons.math3.util.OpenIntToDoubleHashMap.Iterator;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -32,10 +32,8 @@ public class BlogsPages {
 	By closepopup = By.xpath("//*[@class='close close_subscribe_popup']");
 	By recentpost = By.xpath("//*[@class= 'owl-page']");
 	By customloginlink = By.id("custom_global_popup_left_cross");
-	By recentpostclick = By.xpath(
-			"//div[@class='custom_blog_view_right']/div/a[contains(text(),'May I travel by air during pregnancy?')]");
-	By recentmessage = By
-			.xpath("//div[@class='field field--name-node-title field--type-ds field--label-hidden field__item']/h2");
+	By recentpostclick = By.xpath("//div[@class='custom_blog_view_right']/div/a[contains(text(),'May I travel by air during pregnancy?')]");
+	By recentmessage = By.xpath("//div[@class='field field--name-node-title field--type-ds field--label-hidden field__item']/h2");
 	// By dropdown=By.xpath("//*[@class='svg-inline--fa fa-angle-down
 	// fa-w-10']");
 	By dropdown = By.xpath("//*[@class='custom_blog_terms']");
@@ -77,7 +75,8 @@ public class BlogsPages {
 	}
 
 	public void homePageOptions1() {
-		// driver.findElement(customloginlink).click();
+		//driver.findElement(customloginlink).click();
+		//driver.findElement(Blogs).click();
 		SoftAssert softassert = new SoftAssert();
 		// softassert.assertEquals("BABY PRODUCT", "BABY PRODUCT");
 		boolean actRuslt = driver.findElement(BabyProduc).isDisplayed();
